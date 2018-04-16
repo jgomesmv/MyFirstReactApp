@@ -1,4 +1,4 @@
-namespace Models {
+export namespace Models {
     
   export class File implements IFile {
     public name : string;            

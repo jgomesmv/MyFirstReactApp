@@ -9,3 +9,5 @@ My first implementation using TypeScript with React
 -Setup react solution: create-react-app MyFirstReactApp --scripts-version=react-scripts-ts
 
 -Run react solution (go to project local folder using nodejs cmd) type: npm run start
+
+-Instal chrome debugger extension: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
