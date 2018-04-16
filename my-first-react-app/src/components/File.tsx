@@ -14,7 +14,7 @@ function File({ fileName, dateCreated, fileStatus }: Props) {
       if (!fileStatus) {
         throw new Error('A file status is required');
       }
-  
+      
       return (
         <article className="file">
             <div className="fileName">

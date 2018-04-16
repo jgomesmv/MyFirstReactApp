@@ -1,25 +1,31 @@
+/// <reference path="./entities/models.ts" />
+/// <reference path="./entities/interfaces.d.ts" />
+
 import * as React from 'react';
 
+import File from './File';
+
 export interface Props {
-  files: Array<IFile>;
+  files : Array<IFile>;
 }
 
-function fileList({ files }: Props) {
-
+function FileList({ files }: Props) {
   return (
-    // var fileRows = [];
-    
-    // for (let file of files) {
-    //   fileRows.push(
-            // <File fileName={file.fileName} 
-            //     dateCreated={file.dateCreated.parse()} 
-            //     fileStatus={file.fileStatus} />);
-    // }
-
     <section>
-      {/* {fileRows} */}
+      {files.map(function(file : Models.File) {
+        // ReactDOM.render(
+          return <File 
+            key={file.name} 
+            fileName={file.name} 
+            dateCreated={file.dateCreated.toDateString()} 
+            fileStatus={file.status}  
+          />;
+          // ,
+          // document.getElementById(elementId) as HTMLElement
+        // );
+      })}
     </section>
   );
 }
 
-export default fileList;
+export default FileList;
