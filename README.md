@@ -10,4 +10,8 @@ My first implementation using TypeScript with React
 
 -Run react solution (go to project local folder using nodejs cmd) type: npm run start
 
--Instal chrome debugger extension: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
+-Install chrome debugger extension: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
+
+-Install react-bootstrap styles library: https://react-bootstrap.github.io/getting-started/introduction
+
+-Install react-datepicker: https://github.com/Hacker0x01/react-datepicker
