@@ -10,13 +10,10 @@ import QuickSearch from './components/QuickSearch';
 
 import { Models } from './components/entities/models';
 
-let file: Models.File;
-file = new Models.File('File One', new Date(2018, 2, 1), 'Done');
-let fileTwo: Models.File = new Models.File('File Two', new Date(2018, 2, 1), 'Processing');
-
-let files: Models.File[] = [];
-files.push(file);
-files.push(fileTwo);
+let files: Array<Models.File> = [
+  new Models.File('File One', new Date(2018, 2, 1), 'Done'),
+  new Models.File('File Two', new Date(2018, 2, 1), 'Processing')
+]
 
 ReactDOM.render(
   <QuickSearch defaultDate={new Date(2018, 4, 17)}/>,
