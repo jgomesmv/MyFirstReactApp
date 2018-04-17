@@ -7,21 +7,37 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 export interface Props {
     defaultDate : Date;
+    onSearchFilesClick?: () => void;
 }
 
-function OnDateCreatedChange() {
-    console.log('Date Changed!!!');
+var currentFileStatus:string = '';
+var currentDateCreated:Date = new Date();
+var currentfileName:string = '';
+
+function OnFileStatusChange(e:any){
+    currentFileStatus = e.target.value;
 }
 
-function QuickSearch({ defaultDate }: Props) {
+function OnDateCreatedChange(date:Moment.Moment) {
+    currentDateCreated = date.toDate();
+}
+
+function OnFileNameChange(e:any){
+    currentFileStatus = e.target.value;
+}
+
+function QuickSearch({ defaultDate, onSearchFilesClick }: Props) {
     return (
         <Form inline={true}>
             <FormGroup controlId="fileStatus">
                 <ControlLabel>Select Status</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
-                <option value="select">select</option>
-                <option value="done">Done</option>
-                <option value="inProcess">In Process</option>
+                <FormControl 
+                    componentClass="select" 
+                    placeholder="select" 
+                    onChange={OnFileStatusChange}>
+                    <option value="select">select</option>
+                    <option value="done">Done</option>
+                    <option value="inProcess">In Process</option>
                 </FormControl>
             </FormGroup>
             <FormGroup controlId="dateCreated" >
@@ -36,10 +52,11 @@ function QuickSearch({ defaultDate }: Props) {
                 <FormControl
                     type="text"
                     placeholder="Enter file name"
+                    onChange={OnFileNameChange}
                 />
                 <FormControl.Feedback />
             </FormGroup>
-            <Button type="submit">Search</Button>
+            <Button type="submit" onClick={onSearchFilesClick}>Search</Button>
         </Form>
     );
 }
