@@ -1,13 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-// import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import './components/entities/models.ts';
 
 import FileList from './components/FileList';
 import QuickSearch from './components/QuickSearch';
-
 import { Models } from './components/entities/models';
 
 let files: Array<Models.File> = [
