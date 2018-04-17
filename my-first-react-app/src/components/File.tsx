@@ -16,33 +16,13 @@ function File({ fileName, dateCreated, fileStatus }: Props) {
       }
       
       return (
-        <article className="file">
-            <div className="fileName">
-                <p>
-                    File Name
-                </p>
-                <p>
-                    {fileName}
-                </p>
-            </div>
-            <div className="dateCreated">
-                <p>
-                    Date Creation
-                </p>
-                <p>
-                    {dateCreated}
-                </p>
-            </div>
-            <div className="fileStatus">
-                <p>
-                    Status
-                </p>
-                <p>
-                    {fileStatus}
-                </p>
-            </div>
-        </article>
-    );
+        <tr>
+            <th scope="row">--</th>
+            <td>{fileName}</td>
+            <td>{dateCreated}</td>
+            <td>{fileStatus}</td>
+        </tr>
+      );
 }
 
 export default File;

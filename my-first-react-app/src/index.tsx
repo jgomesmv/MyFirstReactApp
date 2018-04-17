@@ -6,6 +6,7 @@ import './index.css';
 import './components/entities/models.ts';
 
 import FileList from './components/FileList';
+import QuickSearch from './components/QuickSearch';
 
 import { Models } from './components/entities/models';
 
@@ -18,8 +19,13 @@ files.push(file);
 files.push(fileTwo);
 
 ReactDOM.render(
+  <QuickSearch defaultDate={new Date(2018, 4, 17)}/>,
+  document.getElementById('quickSearch') as HTMLElement
+);
+
+ReactDOM.render(
   <FileList files={files}/>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('fileList') as HTMLElement
 );
 
 registerServiceWorker();
