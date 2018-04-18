@@ -1,4 +1,4 @@
-interface IStoreState {
+interface IQuickSearchState {
     name: string,
     dateCreated: Date,
     status: string,
