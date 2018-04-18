@@ -15,3 +15,5 @@ My first implementation using TypeScript with React
 -Install react-bootstrap styles library: https://react-bootstrap.github.io/getting-started/introduction
 
 -Install react-datepicker: https://github.com/Hacker0x01/react-datepicker
+
+-Install redux and react-redux as well as their types: npm install -S redux react-redux @types/react-redux https://redux.js.org
